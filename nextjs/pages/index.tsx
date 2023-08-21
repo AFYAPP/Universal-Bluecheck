@@ -2,8 +2,58 @@ import Link from "next/link";
 import type { NextPage } from "next";
 import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
+import React, { useState, useEffect } from "react";
 
 const Home: NextPage = () => {
+
+  const [file, setFile] = useState<File | null>(null);
+  const [fileName, setFileName] = useState("");
+  const [result, setResult] = useState("");
+
+  useEffect(() => { }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.name === "filename") {
+      setFileName(e.target.value);
+    }
+    if (e.target.name === 'file') {
+      const selectedFile = e.target.files?.[0]; // Perform a null check
+      setFile(selectedFile!); // Assert the existence using the non-null assertion operator
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      var formData = new FormData();
+      formData.append("filename", fileName);
+      if (file) {
+        formData.append('file', file);
+      }
+      const res = await fetch("/api/uploadData", {
+        method: "POST",
+        body: formData
+      });
+
+      if (!res.ok) {
+        throw new Error("Network response is not ok");
+      }
+      const data = await res.json();
+      setResult(data.message);
+
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+
+
+
+
+
+
+
   return (
     <>
       <MetaHeader />
@@ -25,37 +75,34 @@ const Home: NextPage = () => {
 
         <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
           <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
+
+
             <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
+
               <BugAntIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contract
-                </Link>{" "}
-                tab.
-              </p>
+            
+              <div className={'container'}>
+      <header className={'header'}>
+        <h1>⁂<span>Store IPFS hash on blockchain</span>⁂</h1>
+      </header>
+      <form onSubmit={handleSubmit}>
+        <label className={'lable'}>Enter Unique Filename: </label>
+        <input type="text" name="filename" value={fileName} onChange={handleChange} className={'input'}></input>
+        <br />
+        <input type="file" name="file" onChange={handleChange} className={'input'}></input>
+        <br />
+        <input type="Submit" className={'button'}></input>
+      </form>
+
+      {result && <p className={result}>{result}</p>}
+    </div>
+              
             </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <SparklesIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Experiment with{" "}
-                <Link href="/example-ui" passHref className="link">
-                  Example UI
-                </Link>{" "}
-                to build your own UI.
-              </p>
-            </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Explore your local transactions with the{" "}
-                <Link href="/blockexplorer" passHref className="link">
-                  Block Explorer
-                </Link>{" "}
-                tab.
-              </p>
-            </div>
+            
+           
           </div>
+
+
         </div>
       </div>
     </>
