@@ -12,3 +12,39 @@ Ever since the rise of artificial intelligence in the past years, some major pro
 Universal bluecheck dapp can be used to prove authenticity of media. The application can give you a certification that the user actually published media on whatever platform it’s on. This acts kind of like the Instagram or twitter blue check except for multiple social media platforms. 
 
 
+Built with:
+
+- [Next.js](https://nextjs.org/)
+- [Thorin](https://thorin.ens.domains/)
+- [Styled Components](https://styled-components.com/)
+- [Viem](https://viem.sh/)
+- [Wagmi](https://wagmi.sh/)
+- [RainbowKit](https://www.rainbowkit.com/)
+
+## How to use
+
+Install dependencies:
+
+```bash
+yarn install
+```
+
+Create a [WalletConnect account](https://cloud.walletconnect.com/sign-in) and add your Project ID to `.env.local`:
+
+```bash
+cp .env.example .env.local
+```
+
+Start the development server:
+
+```bash
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Screenshots
+
+![UBC1](https://github.com/Bleyle823/Universal-Bluecheck/assets/86532040/5282bd9e-4dec-49a3-b8bb-45c16364ce4f)
+![UBC2](https://github.com/Bleyle823/Universal-Bluecheck/assets/86532040/9f2e3a9b-6a14-4365-b8b3-71cb00ff7135)
+![UBC3](https://github.com/Bleyle823/Universal-Bluecheck/assets/86532040/4f343d85-e00f-407b-b2ac-c0858444270d)
