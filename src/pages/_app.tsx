@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const isMounted = useIsMounted()
 
   return (
+    
     <WagmiConfig config={wagmiConfig}>
       <ThemeProvider theme={lightTheme}>
         <ThorinGlobalStyles />

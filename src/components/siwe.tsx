@@ -43,14 +43,14 @@ const SiweComponent: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center ">
-      <button
+      {/*<button
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
         onClick={connectWallet}
       >
         Connect Wallet
-      </button>
+  </button>*/}
       <button
-        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        className="hover:text-black text-white font-bold py-2 px-4 rounded"
         onClick={signInWithEthereum}
       >
         Sign In with Ethereum

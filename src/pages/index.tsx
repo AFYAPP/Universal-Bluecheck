@@ -5,8 +5,8 @@ import styled, { css } from 'styled-components'
 import { ConnectButton } from '@/components/ConnectButton'
 
 import { Container, Layout } from '@/components/templates'
-import Siwe from "../components/siwe";
-
+import Hero from "../components/Hero";
+import Form from "../components/form";
 
 export default function Home() {
   return (
@@ -17,19 +17,26 @@ export default function Home() {
       <Layout>
         {/* Placeholder for the header */}
         <header />
+        <div className="flex justify-between w-full  items-center relative z-10 px-2 mb-2 sm:px-10 ">
+        <div className="flex"><SvgWrapper>
+            <EnsSVG />
+          </SvgWrapper></div>
+        <div className="flex"><ConnectButton /></div>
+        </div>
+
+        
         
 
         {/* Main content */}
-        <Container as="main" $variant="flexVerticalCenter" $width="large">
-          <SvgWrapper>
+         {/* <SvgWrapper>
             <EnsSVG />
-          </SvgWrapper>
-          <Siwe/>
-
-          <Heading >Universal-Bluecheck</Heading>
+          </SvgWrapper>*/}
           
-          <ConnectButton />
-          <ExamplesGrid>
+             
+          <Hero/>
+          <Form/>
+          <Container as="main" $variant="flexVerticalCenter" $width="large">
+         {/*<ExamplesGrid>
             <Card title="Name/Address Input">
               <Typography color="textSecondary">
                 Every address input should also accept ENS names.
@@ -41,20 +48,7 @@ export default function Home() {
                 View
               </Button>
             </Card>
-
-            <Card title="ENS Profile">
-              <Typography color="textSecondary">
-                Show the primary and avatar for an ENS name.
-              </Typography>
-
-              <Button as="a" href="/profile">
-                View
-              </Button>
-            </Card>
-          
-
-
-          </ExamplesGrid>
+          </ExamplesGrid>*/ } 
         </Container>
 
         {/* Placeholder for the footer */}

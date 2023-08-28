@@ -16,7 +16,7 @@ export default function BottomNav() {
     <center>
    
       <div className=" fixed fill-[#1F2937] dark:fill-white bottom-5 w-full  ">
-        <div className=" shadow-2xl flex justify-center items-center bg-black border-[#F3F4F6]  dark:bg-[#111827] dark:border-[#374151] border  rounded-xl max-w-[24rem] py-3 px-5">
+        <div className=" shadow-2xl flex justify-center items-center backdrop-blur-sm bg-white/30 border-[#F3F4F6]   dark:border-[#374151] border  rounded-xl max-w-[24rem] py-3 px-5">
           <Link href="/">
             <div className=" bg-gray-100 dark:bg-[#1F2937] w-[60px] h-[60px] flex justify-center items-center mx-2 rounded-xl cursor-pointer hover:bg-[#3B82F6] dark:hover:bg-[#3B82F6] ">
               <svg
@@ -34,12 +34,12 @@ export default function BottomNav() {
               </svg>
             </div>
           </Link>
-          <Link href="/project">
+          <Link href="/input">
             <div className=" bg-gray-100 dark:bg-[#1F2937]  w-[60px] h-[60px] flex justify-center items-center mx-2 rounded-xl cursor-pointer hover:bg-[#3B82F6] dark:hover:bg-[#3B82F6]   ">
               <img src="lightBulb.svg" width="40" height="40" />
             </div>
           </Link>
-          <Link href="/about">
+          <Link href="/Account">
             <div className=" bg-gray-100 dark:bg-[#1F2937] l w-[60px] h-[60px] flex justify-center items-center mx-2 rounded-xl cursor-pointer hover:bg-[#3B82F6] dark:hover:bg-[#3B82F6] ">
               <img src="Profile.svg" width="40" height="40" />
             </div>
