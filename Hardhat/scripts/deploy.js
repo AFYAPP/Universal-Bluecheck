@@ -1,18 +1,18 @@
-const { ethers } = require('hardhat');
-const fs = require('fs');
+const { ethers } = require("hardhat");
 
 async function main() {
-  const Social = await ethers.getContractFactory("Social");
-  const social = await Social.deploy();
+  const contractFactory = await ethers.getContractFactory("SocialMediaApp");
+  const contractDeploy = await contractFactory.deploy("Decentragram");
 
-  await social.deploy();
+  await contractDeploy.deployed();
 
-  console.log(`Social contract deployed to address: ${social.address}`);
+  console.log(`Contract Deployed at: ${contractDeploy.address}`);
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+
