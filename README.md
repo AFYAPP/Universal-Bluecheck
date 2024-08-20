@@ -1,50 +1,111 @@
-# Universal-Bluecheck
-Universal Bluecheck aims to combat AI-generated impersonation and verify media authenticity before sharing content on web 2 apps like Instagram, Spotify, and Facebook.
 
-## PROBLEM
-Ever since the rise of artificial intelligence in the past years, some major problems have arisen, one notable one being a compromised authenticity for published media. AI is time and again being used to make people let notable figures say things that they did not say by mimicking their voice and likeness. This can lead to several significant problems including: 
-•	Spread of false information, creating confusion and misleading the public leading to damaging of the reputation of notable figures, public figures, or even ordinary individuals by attributing false statements or actions to them.
-•	Political manipulation, causing public distrust in genuine political figures and institutions.
-•	Creation fake incidents or speeches that promote hate speech, discrimination, or violence, leading to social unrest.
-•	Promotion of identity theft and fraud, making it difficult to verify the authenticity of individuals in various contexts.
+# Building and Deploying a Blockchain  web3 API start-up DApp
 
-## SOLUTION
-Universal bluecheck dapp can be used to prove authenticity of media. The application can give you a certification that the user actually published media on whatever platform it’s on. This acts kind of like the Instagram or twitter blue check except for multiple social media platforms. 
+Build your first web3 API start-up, in which you can provide users to upload the NFT to IPFS, and allow them to make API requests to fetch all the IPFS blockchain smart contract data.
+
+## Project Overview
+
+![alt text](	https://www.daulathussain.com/wp-content/uploads/2023/06/build-web3-startup-from-start-to-end.jpg)
+
+## Instruction
+
+Kindly follow the following Instructions to run the project in your system and install the necessary requirements
 
 
-Built with:
+- [Final Source Code](https://www.theblockchaincoders.com/sourceCode/nfts-api-ipfs-web3-start-up-provider)
 
-- [Next.js](https://nextjs.org/)
-- [Thorin](https://thorin.ens.domains/)
-- [Styled Components](https://styled-components.com/)
-- [Viem](https://viem.sh/)
-- [Wagmi](https://wagmi.sh/)
-- [RainbowKit](https://www.rainbowkit.com/)
+#### Setup Video
+- [Final Code Setup video](https://youtu.be/Rw4vukXW9O0?si=mOVlPzQvlvOO7_OE)
 
-## How to use
-
-Install dependencies:
-
-```bash
-yarn install
+```https://code.visualstudio.com/download
+  WATCH: Setup & Demo Of Project
 ```
 
-Create a [WalletConnect account](https://cloud.walletconnect.com/sign-in) and add your Project ID to `.env.local`:
+#### Install Vs Code Editor
 
-```bash
-cp .env.example .env.local
+```https://code.visualstudio.com/download
+  GET: VsCode Editor
 ```
 
-Start the development server:
+#### NodeJs & NPM Version
 
-```bash
-yarn dev
+```https://nodejs.org/en/download
+  NodeJs: v18.12.1
+  NPM: 8.19.2
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Clone Starter File
 
-## Screenshots
+```https://github.com/daulathussain/Airdrop-Crypto-Starter-File
+  GET: Project Starter File Download
+```
 
-![UBC1](https://github.com/Bleyle823/Universal-Bluecheck/assets/86532040/5282bd9e-4dec-49a3-b8bb-45c16364ce4f)
-![UBC2](https://github.com/Bleyle823/Universal-Bluecheck/assets/86532040/9f2e3a9b-6a14-4365-b8b3-71cb00ff7135)
-![UBC3](https://github.com/Bleyle823/Universal-Bluecheck/assets/86532040/4f343d85-e00f-407b-b2ac-c0858444270d)
+
+All you need to follow the complete project and follow the instructions which are explained in the tutorial by Daulat
+
+## Final Code Instruction
+
+If you download the final source code then you can follow the following instructions to run the Dapp successfully
+
+#### Setup Video
+
+```https://code.visualstudio.com/download
+  WATCH: Setup & Demo Of Project
+```
+
+#### Final Source Code
+
+```https://www.theblockchaincoders.com/SourceCode
+  Download the Final Source Code
+```
+
+#### Install Vs Code Editor
+
+```https://code.visualstudio.com/download
+  GET: VsCode Editor
+```
+
+#### NodeJs & NPM Version
+
+```https://nodejs.org/en/download
+  NodeJs: v18.12.1
+  NPM: 8.19.2
+```
+
+
+#### Test Faucets
+
+Alchemy will provide you with some free test faucets which you can transfer to your wallet address for deploying the contract
+
+```https://www.alchemy.com/faucets
+  Get: Free Test Faucets
+```
+
+#### RemixID
+
+We are using RemixID for deploying the contract and generation of the ABI in the project, but you can use any other tools like Hardhat, etc.
+
+```https://remix-project.org
+  OPEN: RemixID
+```
+
+#### Polygon Mumbai
+
+```https://mumbai.polygonscan.com/
+  OPEN: Polygon Mumbai
+```
+
+## Important Links
+
+- [Get Pro Blockchain Developer Course](https://www.theblockchaincoders.com/pro-nft-marketplace)
+- [Support Creator](https://bit.ly/Support-Creator)
+- [All Projects Source Code](https://www.theblockchaincoders.com/SourceCode)
+
+
+## Authors
+
+- [@theblockchaincoders.com](https://www.theblockchaincoders.com/)
+- [@consultancy](https://www.theblockchaincoders.com/consultancy)
+- [@youtube](https://www.youtube.com/@daulathussain)
+
+
